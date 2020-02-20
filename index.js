@@ -87,6 +87,12 @@ Car.prototype.drive = function (miles) {
     this.tank -= gallonsUsed
     this.odometer += miles
   }
+  else {
+    let milesDriven = this.tank * this.milesPerGallon
+    this.odometer += milesDriven
+    this.tank = 0
+    return `I ran out of fuel at ${this.odometer} miles!`
+  }
 
 }
 
